@@ -1,4 +1,8 @@
-.required:before {
+.clientsupport .required:before {
     content: "* ";
     color: red;
+}
+
+.clientsupport .desc-under {
+    color: #777;
 }

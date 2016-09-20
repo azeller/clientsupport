@@ -5,27 +5,30 @@
     "author": "Joeke Kloosterman",
     "version": "0.1.0",
     "package":{
-        
-        
-        "menus": [],
-        
-        
-
+        "menus": [{
+            "text": "clientsupport.menu",
+            "description": "clientsupport.menu_desc",
+            "action": "",
+            "parent": "usernav",
+            "icon": "",
+            "params": "",
+            "handler": "ClientSupport.supportWindow(); return false;"
+        }],
         "elements": {
-        
-            
-            "plugins": [],
-            
-        
-            
-            "chunks": [
-            
-            ]
-            
-        
+            "plugins": [{
+                "name": "ClientSupport",
+                "file": "clientsupport.plugin.php",
+                "events": [
+                    "OnManagerPageBeforeRender"
+                ]
+            }]
         },
-
-        "systemSettings": []
+        "systemSettings": [{
+            "key": "emailaddress",
+            "type": "textfield",
+            "area": "general",
+            "value": ""
+        }]
     }
     
 }
