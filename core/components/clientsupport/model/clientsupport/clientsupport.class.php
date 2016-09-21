@@ -5,13 +5,15 @@
  *
  * @package clientsupport
  */
-class ClientSupport {
+class ClientSupport
+{
     public $modx = null;
     public $namespace = 'clientsupport';
     public $cache = null;
     public $options = array();
 
-    public function __construct(modX &$modx, array $options = array()) {
+    public function __construct(modX &$modx, array $options = array())
+    {
         $this->modx =& $modx;
         $this->namespace = $this->getOption('namespace', $options, 'clientsupport');
 
@@ -47,7 +49,8 @@ class ClientSupport {
      * namespaced system setting; by default this value is null.
      * @return mixed The option value or the default value specified.
      */
-    public function getOption($key, $options = array(), $default = null) {
+    public function getOption($key, $options = array(), $default = null)
+    {
         $option = $default;
         if (!empty($key) && is_string($key)) {
             if ($options != null && array_key_exists($key, $options)) {
@@ -59,5 +62,58 @@ class ClientSupport {
             }
         }
         return $option;
+    }
+
+    /**
+     * Gets a Chunk and caches it; also falls back to file-based templates
+     * for easier debugging.
+     *
+     * @access public
+     * @param string $name The name of the Chunk
+     * @param array $properties The properties for the Chunk
+     * @return string The processed content of the Chunk
+     */
+    public function getChunk($name, $properties = array())
+    {
+        $chunk = null;
+        if (!isset($this->chunks[$name])) {
+            $chunk = $this->_getTplChunk($name);
+            if (empty($chunk)) {
+                $chunk = $this->modx->getObject('modChunk', array('name' => $name), true);
+                if ($chunk == false) {
+                    return false;
+                }
+            }
+            $this->chunks[$name] = $chunk->getContent();
+        } else {
+            $o = $this->chunks[$name];
+            $chunk = $this->modx->newObject('modChunk');
+            $chunk->setContent($o);
+        }
+        $chunk->setCacheable(false);
+        return $chunk->process($properties);
+    }
+
+    /**
+     * Returns a modChunk object from a template file.
+     *
+     * @access private
+     * @param string $name The name of the Chunk. Will parse to name.chunk.tpl
+     * @param string $postFix
+     * @return modChunk/boolean Returns the modChunk object if found, otherwise
+     * false.
+     */
+    private function _getTplChunk($name, $postFix = '.chunk.tpl')
+    {
+        $chunk = false;
+        $f = $this->options['chunksPath'].strtolower($name).$postFix;
+        if (file_exists($f)) {
+            $o = file_get_contents($f);
+            /** @var modChunk $chunk */
+            $chunk = $this->modx->newObject('modChunk');
+            $chunk->set('name', $name);
+            $chunk->setContent($o);
+        }
+        return $chunk;
     }
 }

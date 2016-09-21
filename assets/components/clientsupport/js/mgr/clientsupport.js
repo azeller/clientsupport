@@ -14,11 +14,12 @@ Ext.extend(ClientSupport,Ext.Component,{
         var supportWindow = MODx.load({
             xtype: 'clientsupport-window-support'
             ,listeners: {
-                'success': {fn:function() { console.log('yay') },scope:this}
+                'success': {fn:function() { 
+                    Ext.MessageBox.alert(_('success'), _('clientsupport.message_sent'));
+                },scope:this}
             }
         });
         supportWindow.show();
-        console.log(ClientSupport.config.connectorUrl);
     }
 });
 Ext.reg('clientsupport',ClientSupport);
@@ -50,6 +51,11 @@ ClientSupport.window.Support = function(config) {
             }
         },{
             xtype: 'textfield'
+            ,name: 'url'
+            ,hidden: true
+            ,value: window.location.href
+        },{
+            xtype: 'textfield'
             ,fieldLabel: _('clientsupport.name')
             ,name: 'name'
             ,anchor: '100%'
@@ -78,8 +84,8 @@ ClientSupport.window.Support = function(config) {
             }
         },{
             xtype: 'textarea'
-            ,fieldLabel: _('clientsupport.problem.description')
-            ,name: 'description'
+            ,fieldLabel: _('clientsupport.problem.message')
+            ,name: 'message'
             ,anchor: '100%'
             ,height: 120
         },{

@@ -16,7 +16,24 @@ $_lang['clientsupport.name'] = 'Name';
 $_lang['clientsupport.email'] = 'Emailaddress';
 $_lang['clientsupport.problem'] = 'Problem';
 $_lang['clientsupport.problem.label'] = 'Describe in 1 short sentence what the problem is.';
-$_lang['clientsupport.problem.description'] = 'Description';
+$_lang['clientsupport.problem.message'] = 'Message (optional)';
 $_lang['clientsupport.notice'] = 'Along with above supplied data we will also send your browser version, page URL, username and IP address to the support emailaddress.';
 $_lang['clientsupport.form.cancel'] = 'Cancel';
 $_lang['clientsupport.form.submit'] = 'Submit';
+$_lang['clientsupport.browser'] = 'Browser';
+$_lang['clientsupport.platform'] = 'Platform';
+$_lang['clientsupport.url'] = 'Page URL';
+$_lang['clientsupport.username'] = 'MODX username';
+$_lang['clientsupport.ip_address'] = 'User IP address';
+$_lang['clientsupport.email.subject'] = 'Clientsupport: [[+subject]]';
+$_lang['clientsupport.message_sent'] = 'Your message has been successfully sent.';
+
+//Settings
+$_lang['setting_clientsupport.email_to'] = 'Email-to address';
+$_lang['setting_clientsupport.email_to_desc'] = 'The emailaddress where the support form is sent to. Defaults to system setting "emailsender".';
+$_lang['setting_clientsupport.email_from'] = 'Email-from address';
+$_lang['setting_clientsupport.email_from_desc'] = 'The emailaddress where the support email is sent from. Defaults to system setting "emailsender".';
+$_lang['setting_clientsupport.email_from_name'] = 'Email-from name';
+$_lang['setting_clientsupport.email_from_name_desc'] = 'Use this to override the name of the email-sender where the support form is sent to. Defaults to name supplied in the form.';
+$_lang['setting_clientsupport.email_tpl'] = 'Email tpl';
+$_lang['setting_clientsupport.email_tpl_desc'] = 'The chunk that is used for the support email.';

@@ -10,7 +10,7 @@
             "description": "clientsupport.menu_desc",
             "action": "",
             "parent": "usernav",
-            "icon": "",
+            "icon": "<i class=\"icon-info-circle icon icon-2x clientsupport-icon\"></i>",
             "params": "",
             "handler": "ClientSupport.supportWindow(); return false;"
         }],
@@ -24,7 +24,22 @@
             }]
         },
         "systemSettings": [{
-            "key": "emailaddress",
+            "key": "email_to",
+            "type": "textfield",
+            "area": "general",
+            "value": ""
+        },{
+            "key": "email_from",
+            "type": "textfield",
+            "area": "general",
+            "value": ""
+        },{
+            "key": "email_from_name",
+            "type": "textfield",
+            "area": "general",
+            "value": ""
+        },{
+            "key": "email_tpl",
             "type": "textfield",
             "area": "general",
             "value": ""
