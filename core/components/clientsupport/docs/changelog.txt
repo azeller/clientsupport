@@ -1,5 +1,9 @@
 Changelog for ClientSupport.
 
+ClientSupport 0.1.2
+==============
+- Remove hardcoded emailaddress
+
 ClientSupport 0.1.1
 ==============
 - Added dutch translation
