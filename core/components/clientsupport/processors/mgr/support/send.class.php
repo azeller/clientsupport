@@ -31,8 +31,6 @@ class ClientSupportSendProcessor extends modProcessor
         
         $emailMsg = $this->modx->clientsupport->getChunk($emailTpl, $data);
 
-        $emailTo = 'joeke@sterc.nl';
-        $emailFrom = $this->modx->getOption('emailsender');
         $emailSubject = $this->modx->lexicon('clientsupport.email.subject', array('subject' => $this->getProperty('problem')));
 
         $this->modx->getService('mail', 'mail.modPHPMailer');
