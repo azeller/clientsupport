@@ -3,7 +3,7 @@
     "lowCaseName": "clientsupport",
     "description": "Support/help form in MODX manager ",
     "author": "Joeke Kloosterman",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "package":{
         "menus": [{
             "text": "clientsupport.menu",
@@ -44,6 +44,10 @@
             "area": "general",
             "value": ""
         }]
+    },
+    "build": {
+        "readme": "docs/readme.txt",
+        "license": "docs/license.txt",
+        "changelog": "docs/changelog.txt"
     }
-    
 }
