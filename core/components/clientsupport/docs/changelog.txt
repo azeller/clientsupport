@@ -1,5 +1,9 @@
 Changelog for ClientSupport.
 
+ClientSupport 0.1.3
+==============
+- Auto-populate the name and emailaddress with MODX user fullname and email
+
 ClientSupport 0.1.2
 ==============
 - Remove hardcoded emailaddress
