@@ -61,6 +61,7 @@ ClientSupport.window.Support = function(config) {
             ,anchor: '100%'
             ,height: 'auto'
             ,allowBlank: false
+            ,value: ClientSupport.config.user_name
         },{
             xtype: 'textfield'
             ,fieldLabel: _('clientsupport.email')
@@ -68,6 +69,7 @@ ClientSupport.window.Support = function(config) {
             ,anchor: '100%'
             ,height: 'auto'
             ,allowBlank: false
+            ,value: ClientSupport.config.user_email
         },{
             xtype: 'textfield'
             ,fieldLabel: _('clientsupport.problem')

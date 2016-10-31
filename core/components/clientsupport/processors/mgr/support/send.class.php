@@ -25,13 +25,26 @@ class ClientSupportSendProcessor extends modProcessor
         );
 
         $emailTo = $this->modx->getOption('clientsupport.email_to', null, $this->modx->getOption('emailsender'), true);
-        $emailFrom = $this->modx->getOption('clientsupport.email_from', null, $this->modx->getOption('emailsender'), true);
-        $emailFromName = $this->modx->getOption('clientsupport.email_from_name', null, $this->getProperty('name'), true);
+        $emailFrom = $this->modx->getOption(
+            'clientsupport.email_from',
+            null,
+            $this->modx->getOption('emailsender'),
+            true
+        );
+        $emailFromName = $this->modx->getOption(
+            'clientsupport.email_from_name',
+            null,
+            $this->getProperty('name'),
+            true
+        );
         $emailTpl = $this->modx->getOption('clientsupport.email_tpl', null, 'email', true);
         
         $emailMsg = $this->modx->clientsupport->getChunk($emailTpl, $data);
 
-        $emailSubject = $this->modx->lexicon('clientsupport.email.subject', array('subject' => $this->getProperty('problem')));
+        $emailSubject = $this->modx->lexicon(
+            'clientsupport.email.subject',
+            array('subject' => $this->getProperty('problem'))
+        );
 
         $this->modx->getService('mail', 'mail.modPHPMailer');
         $this->modx->mail->set(modMail::MAIL_BODY, $emailMsg);
@@ -42,7 +55,10 @@ class ClientSupportSendProcessor extends modProcessor
         $this->modx->mail->address('reply-to', $this->getProperty('email'));
         $this->modx->mail->setHTML(true);
         if (!$this->modx->mail->send()) {
-            $this->modx->log(modX::LOG_LEVEL_ERROR, 'An error occurred while trying to send the email: '.$this->modx->mail->mailer->ErrorInfo);
+            $this->modx->log(
+                modX::LOG_LEVEL_ERROR,
+                'An error occurred while trying to send the email: '.$this->modx->mail->mailer->ErrorInfo
+            );
         }
         $this->modx->mail->reset();
 

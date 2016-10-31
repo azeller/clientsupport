@@ -7,9 +7,20 @@ switch ($modx->event->name) {
         }
         $assetsUrl = $modx->getOption('clientsupport.assets_url', null, $modx->getOption('assets_url', null, MODX_ASSETS_URL).'components/clientsupport/');
 
+        if ($modx->user) {
+            $name = $modx->user->get('username');
+            $email = '';
+            $profile = $modx->user->getOne('Profile');
+            if ($profile) {
+                $name = $profile->get('fullname');
+                $email = $profile->get('email');
+            }
+        }
         $modx->regClientStartupHTMLBlock('<script type="text/javascript">
         Ext.onReady(function() {
             ClientSupport.config = '.$modx->toJSON($clientsupport->options).';
+            ClientSupport.config.user_name = "'.$name.'";
+            ClientSupport.config.user_email = "'.$email.'";
             ClientSupport.config.connector_url = "'.$clientsupport->options['connectorUrl'].'";
         });
         </script>');
