@@ -43,6 +43,11 @@
             "type": "textfield",
             "area": "general",
             "value": ""
+        },{
+            "key": "ticket_system",
+            "type": "clientsupport-combo-ticket-systems",
+            "area": "general",
+            "value": "zendesk"
         }]
     },
     "build": {

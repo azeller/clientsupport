@@ -9,3 +9,17 @@
 .clientsupport-icon {
     padding-top: 15px;
 }
+
+.clientsupport .clientsupport-desc {
+    padding: 15px 0;
+}
+.clientsupport .clientsupport-desc p {
+    width: 450px;
+}
+.clientsupport .clientsupport-desc img {
+    position: absolute;
+    top: -45px;
+    right: 0px;
+    max-width: 160px;
+    max-height: 120px;
+}

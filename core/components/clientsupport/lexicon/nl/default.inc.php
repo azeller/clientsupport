@@ -37,3 +37,5 @@ $_lang['setting_clientsupport.email_from_name'] = 'Email-from name';
 $_lang['setting_clientsupport.email_from_name_desc'] = 'Use this to override the name of the email-sender where the support form is sent to. Defaults to name supplied in the form.';
 $_lang['setting_clientsupport.email_tpl'] = 'Email tpl';
 $_lang['setting_clientsupport.email_tpl_desc'] = 'The chunk that is used for the support email.';
+$_lang['setting_clientsupport.ticket_system'] = 'Ticket system branding';
+$_lang['setting_clientsupport.email_tpl_desc'] = 'Choose the ticket system you\'re using. The ClientSupport form will be branded with the logo from the selected system';

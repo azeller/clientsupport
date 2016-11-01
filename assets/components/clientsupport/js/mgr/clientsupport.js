@@ -23,9 +23,13 @@ Ext.extend(ClientSupport,Ext.Component,{
     }
 });
 Ext.reg('clientsupport',ClientSupport);
-ClientSupport = new ClientSupport();
 
+ClientSupport = new ClientSupport();
 ClientSupport.window.Support = function(config) {
+    var ticket_system_logo = '';
+    if (ClientSupport.config.ticket_system) {
+        ticket_system_logo = '<img src="'+ClientSupport.config.assetsUrl+'img/logo_'+ClientSupport.config.ticket_system+'.jpg" />';
+    }
     config = config || {};
     Ext.applyIf(config,{
         title: _('clientsupport.help')
@@ -44,7 +48,7 @@ ClientSupport.window.Support = function(config) {
             ,border: false
             ,cls: 'modx-page-header'
         },{
-            html: '<p>'+_('clientsupport.help.description')+'</p>'
+            html: '<div class="clientsupport-desc"><p>'+_('clientsupport.help.description')+'</p>'+ticket_system_logo+'</div>'
             ,border: true
             ,style: {
                 padding: '5px 0 10px 0'
@@ -103,3 +107,32 @@ ClientSupport.window.Support = function(config) {
 };
 Ext.extend(ClientSupport.window.Support,MODx.Window);
 Ext.reg('clientsupport-window-support',ClientSupport.window.Support);
+
+ClientSupport.combo.ticket_systems = function(config) {
+    config = config || {};
+    Ext.applyIf(config,{
+        name: 'ticket_system'
+        ,hiddenName: 'ticket_system'
+        ,forceSelection: false
+        ,typeAhead: false
+        ,editable: false
+        ,allowBlank: true
+        ,listWidth: 250
+        ,pageSize: 20
+        ,store: new Ext.data.SimpleStore({
+            data: [
+                ["", "None"],
+                ["zendesk", "Zendesk"],
+                ["jira", "JIRA"],
+            ],
+            id: 0,
+            fields: ["value", "text"]
+        })
+        ,valueField: 'value'
+        ,displayField: 'text'
+        ,mode: "local"
+    });
+    ClientSupport.combo.ticket_systems.superclass.constructor.call(this,config);
+};
+Ext.extend(ClientSupport.combo.ticket_systems,MODx.combo.ComboBox);
+Ext.reg('clientsupport-combo-ticket-systems',ClientSupport.combo.ticket_systems);

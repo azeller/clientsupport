@@ -22,6 +22,7 @@ switch ($modx->event->name) {
             ClientSupport.config.user_name = "'.$name.'";
             ClientSupport.config.user_email = "'.$email.'";
             ClientSupport.config.connector_url = "'.$clientsupport->options['connectorUrl'].'";
+            ClientSupport.config.ticket_system = "'.$modx->getOption('clientsupport.ticket_system', null, '').'";
         });
         </script>');
         $modx->regClientCSS($assetsUrl.'css/mgr.css');
