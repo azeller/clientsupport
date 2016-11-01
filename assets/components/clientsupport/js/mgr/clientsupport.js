@@ -123,7 +123,8 @@ ClientSupport.combo.ticket_systems = function(config) {
             data: [
                 ["", "None"],
                 ["zendesk", "Zendesk"],
-                ["jira", "JIRA"],
+                ["freshdesk", "Freshdesk"],
+                ["jira", "JIRA"]
             ],
             id: 0,
             fields: ["value", "text"]
