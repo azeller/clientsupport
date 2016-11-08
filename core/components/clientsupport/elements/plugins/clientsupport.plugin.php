@@ -24,9 +24,10 @@ switch ($modx->event->name) {
             ClientSupport.config.connector_url = "'.$clientsupport->options['connectorUrl'].'";
             ClientSupport.config.ticket_system = "'.$modx->getOption('clientsupport.ticket_system', null, '').'";
             
-            console.log(ClientSupport.config.ticket_system);
             if (ClientSupport.config.ticket_system.length) {
                 Ext.get("limenu-clientsupport.menu").addClass("brand-custom brand-" + ClientSupport.config.ticket_system);    
+            } else {
+                Ext.get("limenu-clientsupport.menu").addClass("brand-default");    
             }
         });
         </script>');

@@ -25,6 +25,10 @@
     padding-top: 15px;
 }
 
+.clientsupport-icon .icon-info-circle:before {
+    content: " ";
+}
+
 .brand-custom .clientsupport-icon {
     padding-top: 6px;
 }
