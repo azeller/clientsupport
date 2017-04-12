@@ -6,13 +6,19 @@ require_once dirname(dirname(__FILE__)) . '/index.class.php';
  * @package clientsupport
  * @subpackage controllers
  */
-class ClientSupportHomeManagerController extends ClientSupportBaseManagerController {
-    public function process(array $scriptProperties = array()) {
-
+class ClientSupportHomeManagerController extends ClientSupportBaseManagerController
+{
+    public function process(array $scriptProperties = array())
+    {
+        return;
     }
-    public function getPageTitle() { return $this->modx->lexicon('clientsupport'); }
-    public function loadCustomCssJs() {
-    
+    public function getPageTitle()
+    {
+        return $this->modx->lexicon('clientsupport');
+    }
+    public function loadCustomCssJs()
+    {
+        return;
     }
 
 }

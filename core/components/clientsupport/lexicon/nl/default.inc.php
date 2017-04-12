@@ -1,6 +1,6 @@
 <?php
 /**
- * Default English Lexicon Entries for ClientSupport
+ * Default Dutch Lexicon Entries for ClientSupport
  *
  * @package clientsupport
  * @subpackage lexicon
@@ -10,23 +10,23 @@ $_lang['clientsupport'] = 'ClientSupport';
 $_lang['clientsupport.help'] = 'Help';
 $_lang['clientsupport.menu'] = 'Help';
 $_lang['clientsupport.menu_desc'] = 'Help';
-$_lang['clientsupport.header'] = 'How can we help you?';
-$_lang['clientsupport.help.description'] = 'Please fill in the form below and our service team will get right on it.';
-$_lang['clientsupport.name'] = 'Your name';
-$_lang['clientsupport.email'] = 'Your emailaddress';
-$_lang['clientsupport.problem'] = 'Problem';
-$_lang['clientsupport.problem.label'] = 'Describe in 1 short sentence what the problem is.';
-$_lang['clientsupport.problem.message'] = 'Message (optional)';
-$_lang['clientsupport.notice'] = 'Along with above supplied data we will also send your browser version, page URL, username and IP address to the support emailaddress.';
-$_lang['clientsupport.form.cancel'] = 'Cancel';
-$_lang['clientsupport.form.submit'] = 'Submit';
+$_lang['clientsupport.header'] = 'Kunnen we u ergens mee helpen?';
+$_lang['clientsupport.help.description'] = 'Vul onderstaand formulier in en onze service afdeling gaat er direct mee aan de slag.';
+$_lang['clientsupport.name'] = 'Uw naam';
+$_lang['clientsupport.email'] = 'Uw e-mailadres';
+$_lang['clientsupport.problem'] = 'Probleem';
+$_lang['clientsupport.problem.label'] = 'Omschrijf in 1 korte zin wat het probleem is.';
+$_lang['clientsupport.problem.message'] = 'Omschrijving (optioneel)';
+$_lang['clientsupport.notice'] = 'Naast bovenstaande gegevens worden ook uw browser versie, pagina URL, gebruikersnaam en IP adres naar ons verstuurd.';
+$_lang['clientsupport.form.cancel'] = 'Annuleren';
+$_lang['clientsupport.form.submit'] = 'Versturen';
 $_lang['clientsupport.browser'] = 'Browser';
 $_lang['clientsupport.platform'] = 'Platform';
-$_lang['clientsupport.url'] = 'Page URL';
-$_lang['clientsupport.username'] = 'MODX username';
-$_lang['clientsupport.ip_address'] = 'User IP address';
+$_lang['clientsupport.url'] = 'Pagina URL';
+$_lang['clientsupport.username'] = 'MODX gebruikersnaam';
+$_lang['clientsupport.ip_address'] = 'Gebruiker IP address';
 $_lang['clientsupport.email.subject'] = 'Clientsupport: [[+subject]]';
-$_lang['clientsupport.message_sent'] = 'Your message has been successfully sent.';
+$_lang['clientsupport.message_sent'] = 'Uw bericht is succesvol verstuurd.';
 
 //Settings
 $_lang['setting_clientsupport.email_to'] = 'Email-to address';

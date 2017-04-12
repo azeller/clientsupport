@@ -1,4 +1,58 @@
-.required:before {
+.clientsupport .required:before {
     content: "* ";
     color: red;
+}
+
+.clientsupport .desc-under {
+    color: #777;
+}
+
+.clientsupport .clientsupport-desc {
+    padding: 15px 0;
+}
+.clientsupport .clientsupport-desc p {
+    width: 450px;
+}
+.clientsupport .clientsupport-desc img {
+    position: absolute;
+    top: -45px;
+    right: 0px;
+    max-width: 160px;
+    max-height: 120px;
+}
+
+.clientsupport-icon {
+    padding-top: 15px;
+}
+
+.clientsupport-icon .icon-info-circle:before {
+    content: " ";
+}
+
+.brand-custom .clientsupport-icon {
+    padding-top: 6px;
+}
+
+.brand-custom .icon-info-circle:before {
+    content: " ";
+    display: block;
+    width: 42px;
+    height: 42px;
+    background-position: center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.brand-zendesk .icon-info-circle:before {
+    background-image: url(../img/icon-zendesk-white.svg);
+    background-size: 25px 25px;
+}
+
+.brand-jira .icon-info-circle:before {
+    background-image: url(../img/icon-jira.svg);
+}
+
+.brand-freshdesk .icon-info-circle:before {
+    background-image: url(../img/icon-freshdesk.png);
+    background-size: 20px 20px;
 }
