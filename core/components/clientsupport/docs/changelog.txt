@@ -1,5 +1,11 @@
 Changelog for ClientSupport.
 
+ClientSupport 0.1.5
+==============
+- Update Zendesk logo
+- Fix some styling issues
+- Add email validation to email field
+
 ClientSupport 0.1.4
 ==============
 - Added branding icons for menu icon

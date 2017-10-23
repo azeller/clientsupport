@@ -15,10 +15,10 @@
 }
 .clientsupport .clientsupport-desc img {
     position: absolute;
-    top: -45px;
+    top: -40px;
     right: 0px;
     max-width: 160px;
-    max-height: 120px;
+    max-height: 100px;
 }
 
 .clientsupport-icon {
@@ -29,6 +29,10 @@
     content: " ";
 }
 
+.brand-custom > a {
+    padding: 0 20px 0 18px !important;
+}
+
 .brand-custom .clientsupport-icon {
     padding-top: 6px;
 }
@@ -36,16 +40,16 @@
 .brand-custom .icon-info-circle:before {
     content: " ";
     display: block;
-    width: 42px;
-    height: 42px;
+    width: 46px;
+    height: 46px;
     background-position: center;
     background-size: 100% auto;
     background-repeat: no-repeat;
 }
 
 .brand-zendesk .icon-info-circle:before {
-    background-image: url(../img/icon-zendesk-white.svg);
-    background-size: 25px 25px;
+    background-image: url(../img/icon-zendesk-white-v2.svg);
+    background-size: 45px 40px;
 }
 
 .brand-jira .icon-info-circle:before {

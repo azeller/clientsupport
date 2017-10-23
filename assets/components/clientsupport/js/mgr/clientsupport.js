@@ -68,6 +68,7 @@ ClientSupport.window.Support = function(config) {
             ,value: ClientSupport.config.user_name
         },{
             xtype: 'textfield'
+            ,vtype: 'email'
             ,fieldLabel: _('clientsupport.email')
             ,name: 'email'
             ,anchor: '100%'
