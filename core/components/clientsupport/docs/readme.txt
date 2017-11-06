@@ -1,7 +1,7 @@
 ---------------------------------------
 ClientSupport
 ---------------------------------------
-Version: 0.1.3
+Version: 0.1.5
 Author: Sterc <modx@sterc.nl>
 ---------------------------------------
 An easy to use solution for allowing manager users to ask for help or support inside the MODX manager.
