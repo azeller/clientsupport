@@ -1,5 +1,9 @@
 Changelog for ClientSupport.
 
+ClientSupport 1.0.0
+==============
+- First public release
+
 ClientSupport 0.1.6
 ==============
 - Add StercExtra resolver + setup options
