@@ -1,5 +1,9 @@
 Changelog for ClientSupport.
 
+ClientSupport 0.1.6
+==============
+- Add StercExtra resolver + setup options
+
 ClientSupport 0.1.5
 ==============
 - Update Zendesk logo
