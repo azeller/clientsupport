@@ -1,5 +1,19 @@
 Changelog for ClientSupport.
 
+ClientSupport 1.0.0
+==============
+- First public release
+
+ClientSupport 0.1.6
+==============
+- Add StercExtra resolver + setup options
+
+ClientSupport 0.1.5
+==============
+- Update Zendesk logo
+- Fix some styling issues
+- Add email validation to email field
+
 ClientSupport 0.1.4
 ==============
 - Added branding icons for menu icon
